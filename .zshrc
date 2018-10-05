@@ -94,7 +94,19 @@ export LANG=en_US.UTF-8
 export TERM="xterm-256color"
 
 ZSH_TMUX_AUTOSTART=false
-[[ $TMUX == "" ]] && tmux new-session
+#[[ $TMUX == "" ]] && tmux new-session
+# start tmux and attach to the first unattached session
+if [ -z "$TMUX" ]; then
+    attach_session=$(tmux 2> /dev/null ls -F \
+        '#{session_attached} #{?#{==:#{session_last_attached},},1,#{session_last_attached}} #{session_id}' |
+        awk '/^0/ { if ($2 > t) { t = $2; s = $3 } }; END { if (s) printf "%s", s }')
+
+    if [ -n "$attach_session" ]; then
+        tmux attach -t "$attach_session"
+    else
+        tmux
+    fi
+fi
 DISABLE_UPDATE_PROMPT=true
 DISABLE_AUTO_UPDATE=true
 
