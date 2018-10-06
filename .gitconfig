@@ -1,0 +1,7 @@
+[user]
+	name = Sergej Herbert
+
+[includeIf "gitdir:~/z_lab_repos/"]
+  path = ~/.gitconfs/.z_lab.gitconfig
+[includeIf "gitdir:~/priv_dev/"]
+  path = ~/.gitconfs/private.gitconfig
