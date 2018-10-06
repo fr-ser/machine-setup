@@ -6,5 +6,6 @@ cp ~/.gitconfig .gitconfig
 cp -r ~/.gitconfs/ .gitconfs/
 
 git add .
-message="automatic update of $date"
+now=$(date)
+message="automatic update of $now"
 git commit -m "$message"
