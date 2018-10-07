@@ -5,3 +5,5 @@
   path = ~/.gitconfs/z_lab.gitconfig
 [includeIf "gitdir:~/priv_dev/"]
   path = ~/.gitconfs/private.gitconfig
+[core]
+	editor = code --wait

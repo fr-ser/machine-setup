@@ -130,9 +130,6 @@ source ~/.zsh-plugins/.zsh-nvm/zsh-nvm.plugin.zsh
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
 
-# added path for user local scripts
-export PATH=~/.local/bin:$PATH
-
 # added aliases (same as in bash)
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
