@@ -7,3 +7,4 @@
   path = ~/.gitconfs/private.gitconfig
 [core]
 	editor = code --wait
+	excludesfile = /home/sergej/.gitignore_global
