@@ -1,2 +1,8 @@
 .vscode
+
+# Python
 .python-version
+__pycache__
+
+# Node.Js
+node_modules
