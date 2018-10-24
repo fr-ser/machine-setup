@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+cp ~/.bash_aliases .bash_aliases
 cp ~/.zshrc .zshrc
 cp ~/.tmux.conf .tmux.conf
 cp ~/.gitconfig .gitconfig
