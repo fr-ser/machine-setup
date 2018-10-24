@@ -94,7 +94,6 @@ export LANG=en_US.UTF-8
 export TERM="xterm-256color"
 
 ZSH_TMUX_AUTOSTART=false
-#[[ $TMUX == "" ]] && tmux new-session
 # start tmux and attach to the first unattached session
 if [ -z "$TMUX" ]; then
     attach_session=$(tmux 2> /dev/null ls -F \
