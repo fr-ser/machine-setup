@@ -7,3 +7,8 @@ alias pdfEbookQuality='gs -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dCompatibilityLev
 
 # Python Quality of live
 alias prp="pipenv run python"
+
+# Docker Quality of live
+docker-all() {
+    docker "$1" $(docker ps -aq)
+}
