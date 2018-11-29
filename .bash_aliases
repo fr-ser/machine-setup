@@ -12,3 +12,5 @@ alias prp="pipenv run python"
 docker-all() {
     docker "$1" $(docker ps -aq)
 }
+
+alias docker-all kill='docker-all stop && docker-all rm'

@@ -125,6 +125,9 @@ source $ZSH/oh-my-zsh.sh
 export NVM_AUTO_USE=true
 source ~/.zsh-plugins/.zsh-nvm/zsh-nvm.plugin.zsh
 
+# disable sharing of history between (tmux) terminals / panes
+setopt nosharehistory
+
 # added for autocompletion for docker
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
