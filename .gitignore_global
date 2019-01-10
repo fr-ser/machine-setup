@@ -1,8 +1,8 @@
 .vscode
 
 # Python
-.python-version
 __pycache__
+
 ## Unit test / coverage reports
 htmlcov/
 .tox/
