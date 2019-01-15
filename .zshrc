@@ -140,3 +140,6 @@ fi
 # adds rbenv to path to manage ruby versions
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# auto correction of last command
+eval $(thefuck --alias heck)
