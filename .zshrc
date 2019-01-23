@@ -10,6 +10,8 @@
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
+PROMPT="1"
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -143,3 +145,6 @@ eval "$(rbenv init -)"
 
 # auto correction of last command
 eval $(thefuck --alias heck)
+
+# partial name navigation
+. /usr/share/autojump/autojump.sh
