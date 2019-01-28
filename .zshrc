@@ -10,8 +10,6 @@
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
-PROMPT="1"
-
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -96,7 +94,7 @@ export LANG=en_US.UTF-8
 export TERM="xterm-256color"
 
 ZSH_TMUX_AUTOSTART=false
-# start tmux and attach to the first unattached session
+# start tmux if a session is unattached and connect to the first unattached session
 if [ -z "$TMUX" ]; then
     attach_session=$(tmux 2> /dev/null ls -F \
         '#{session_attached} #{?#{==:#{session_last_attached},},1,#{session_last_attached}} #{session_id}' |
@@ -104,8 +102,6 @@ if [ -z "$TMUX" ]; then
 
     if [ -n "$attach_session" ]; then
         tmux attach -t "$attach_session"
-    else
-        tmux
     fi
 fi
 DISABLE_UPDATE_PROMPT=true

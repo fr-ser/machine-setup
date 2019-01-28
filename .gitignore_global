@@ -1,4 +1,6 @@
+# editors/IDEs
 .vscode
+.idea
 
 # Python
 __pycache__
