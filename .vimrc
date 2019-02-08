@@ -5,8 +5,8 @@ set number
 filetype plugin indent on
 
 " NERDTree configs
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
+" autocmd VimEnter * NERDTree
+" autocmd VimEnter * wincmd p
 
-:map <C-e> :NERDTree
+:map <C-e> :NERDTree<CR>
 
