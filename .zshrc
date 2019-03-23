@@ -87,8 +87,6 @@ ZSH_THEME="robbyrussell"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# settings from Michael Schuhmacher
-# https://github.com/schumacher-m/dotfiles/
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export TERM="xterm-256color"
@@ -135,12 +133,3 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# adds rbenv to path to manage ruby versions
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-# auto correction of last command
-eval $(thefuck --alias heck)
-
-# partial name navigation
-. /usr/share/autojump/autojump.sh

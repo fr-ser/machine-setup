@@ -8,6 +8,7 @@ cp ~/.gitconfig .gitconfig
 cp -r ~/.gitconfs/ .gitconfs/
 cp ~/.gitignore_global .gitignore_global
 cp ~/.oh-my-zsh/custom/themes/robbyrussell.zsh-theme robbyrussell.zsh-theme
+cp -r ~/.config/powerline .
 
 git add .
 now=$(date)
