@@ -100,6 +100,8 @@ if [ -z "$TMUX" ]; then
 
     if [ -n "$attach_session" ]; then
         tmux attach -t "$attach_session"
+    else
+	tmux
     fi
 fi
 DISABLE_UPDATE_PROMPT=true

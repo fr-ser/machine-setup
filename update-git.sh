@@ -11,6 +11,5 @@ cp ~/.oh-my-zsh/custom/themes/robbyrussell.zsh-theme robbyrussell.zsh-theme
 cp -r ~/.config/powerline .
 
 git add .
-now=$(date)
-message="automatic update of $now"
-git commit -m "$message"
+git commit
+
