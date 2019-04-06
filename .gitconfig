@@ -6,7 +6,7 @@
 [includeIf "gitdir:~/priv_dev/"]
   path = ~/.gitconfs/private.gitconfig
 [core]
-	editor = code --wait
+	editor = vim
 	excludesfile = /home/sergej/.gitignore_global
 [pager]
 	branch = false

@@ -4,6 +4,7 @@ cp ~/.bash_aliases .bash_aliases
 cp ~/.zshrc .zshrc
 cp ~/.vimrc .vimrc
 cp ~/.tmux.conf .tmux.conf
+cp ~/.tmux/.tmuxline_snapshot .tmuxline_snapshot
 cp ~/.gitconfig .gitconfig
 cp -r ~/.gitconfs/ .gitconfs/
 cp ~/.gitignore_global .gitignore_global
