@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/sergej/.oh-my-zsh"
+export ZSH="/home/sergej/.oh-my-zsh"
 
-# Set name of the theme to load 
+# Set name of the theme to load
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
@@ -41,21 +41,17 @@ fi
 DISABLE_UPDATE_PROMPT=true
 DISABLE_AUTO_UPDATE=true
 
-# Which plugins would you like to load?
+source $ZSH/oh-my-zsh.sh
+
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git, bundler, ruby, rake, postgres, pyhton, node, tmux
 )
 
-source $ZSH/oh-my-zsh.sh
-
 # nvm plugin with auto detection of nvmrc files
 
 export NVM_AUTO_USE=true
-source ~/.zsh-plugins/.zsh-nvm/zsh-nvm.plugin.zsh
 
 # disable sharing of history between (tmux) terminals / panes
 setopt nosharehistory
