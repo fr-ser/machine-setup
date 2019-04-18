@@ -13,4 +13,3 @@ cp -r ~/.config/powerline .
 
 git add .
 git commit
-
