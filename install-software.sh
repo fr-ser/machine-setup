@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
-sudo apt-get install -y zsh docker curl vim git tmux fonts-powerline xsel ncdu
+sudo apt-get install -y zsh curl vim git tmux fonts-powerline xsel ncdu
+sudo snap install docker
 sudo apt-get upgrade -y
-sudo apt-get autoremove
+sudo apt-get autoremove -y
 # install pyenv
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 # install vundle (vim package manager)
