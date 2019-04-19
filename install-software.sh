@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
-sudo apt-get install -y zsh curl vim git tmux fonts-powerline xsel ncdu
+sudo apt-get install -y zsh curl vim git tmux fonts-powerline xsel ncdu htop
 sudo snap install docker
+# developer features for pyenv
+sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
+libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
 sudo apt-get upgrade -y
 sudo apt-get autoremove -y
 # install pyenv
