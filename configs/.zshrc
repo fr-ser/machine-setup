@@ -11,11 +11,7 @@ COMPLETION_WAITING_DOTS="true"
 # User configuration
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='mvim'
-fi
+export EDITOR='vim'
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
@@ -49,16 +45,16 @@ plugins=(
   git, bundler, ruby, rake, postgres, pyhton, node, tmux
 )
 
-# nvm plugin with auto detection of nvmrc files
-
-export NVM_AUTO_USE=true
-
 # disable sharing of history between (tmux) terminals / panes
 setopt nosharehistory
 
 # added for autocompletion for docker
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # added aliases (same as in bash)
 if [ -f ~/.bash_aliases ]; then
