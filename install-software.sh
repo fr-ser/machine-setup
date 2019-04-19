@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sudo apt-get install -y zsh docker curl vim git tmux fonts-powerline xsel
+sudo apt-get install -y zsh docker curl vim git tmux fonts-powerline xsel ncdu
 sudo apt-get upgrade -y
 sudo apt-get autoremove
 # install pyenv
