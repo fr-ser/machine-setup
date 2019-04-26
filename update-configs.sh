@@ -12,3 +12,5 @@ cp /usr/local/bin/git-graph ./configs/git-graph
 cp ~/.oh-my-zsh/custom/themes/robbyrussell.zsh-theme ./configs/robbyrussell.zsh-theme
 cp -r ~/.gitconfs/* ./configs/.gitconfs/
 cp -r ~/.config/powerline/* ./configs/powerline/
+cp -r ~/.config/Code/User/settings.json ./configs/Code/User/settings.json
+

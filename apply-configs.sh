@@ -15,5 +15,7 @@ cp ./configs/robbyrussell.zsh-theme ~/.oh-my-zsh/custom/themes/robbyrussell.zsh-
 cp -r ./configs/.gitconfs/ ~/
 mkdir -p ~/.config/
 cp -r ./configs/powerline/ ~/.config/
+mkdir -p ~/.config/Code/User/
+cp -r ./configs/Code/User/settings.json ~/.config/Code/User/settings.json
 
 echo "Configs applied. All good"
