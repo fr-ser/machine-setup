@@ -2,7 +2,8 @@
 
 cp ./configs/.bash_aliases ~/.bash_aliases
 cp ./configs/.gitignore_global ~/.gitignore_global
-sudo cp ./configs/git-graph /usr/local/bin/git-graph
+sudo cp ./git_commands/git-graph /usr/local/bin/git-graph
+sudo cp ./git_commands/git-push-new /usr/local/bin/git-push-new
 cp ./configs/.zshrc ~/.zshrc
 cp ./configs/.zshenv ~/.zshenv
 cp ./configs/.vimrc ~/.vimrc

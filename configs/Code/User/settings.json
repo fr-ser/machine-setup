@@ -1,0 +1,30 @@
+{
+  "editor.formatOnSave": true,
+  "terminal.integrated.fontWeight": "600",
+  "editor.rulers": [100],
+
+  "prettier.trailingComma": "es5",
+
+  "python.linting.pylintEnabled": true,
+  "python.linting.pylintArgs": ["----contextmanager-decorators=contextlib.contextmanager"],
+  "python.linting.pylintPath": "/home/sergej/.local/bin/pylint",
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Args": ["--max-line-length=100"],
+  "python.linting.flake8Path": "/home/sergej/.local/bin/flake8",
+  "python.formatting.autopep8Args": ["--max-line-length=100"],
+  "python.formatting.autopep8Path": "/home/sergej/.local/bin/autopep8",
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.statusBar.enabled": false,
+  "prettier.printWidth": 100,
+  "explorer.confirmDragAndDrop": false,
+  "window.zoomLevel": 1,
+  "files.associations": {
+    "*.sql": "sql"
+  },
+  "extensions.ignoreRecommendations": false,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
