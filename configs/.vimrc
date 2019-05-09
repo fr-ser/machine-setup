@@ -72,3 +72,5 @@ set noshowmode " Hide the default mode text below the statusline
 set list
 set listchars=tab:▸-
 
+" line wrapping for git commits
+autocmd Filetype gitcommit setlocal spell textwidth=72
