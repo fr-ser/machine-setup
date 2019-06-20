@@ -2,8 +2,18 @@
   "editor.formatOnSave": true,
   "terminal.integrated.fontWeight": "600",
   "editor.rulers": [100],
+  "extensions.ignoreRecommendations": false,
+  "explorer.confirmDragAndDrop": false,
+  "window.zoomLevel": 0,
+  "files.associations": {
+    "*.sql": "sql"
+  },
+
+  "typescript.updateImportsOnFileMove.enabled": "always",
 
   "prettier.trailingComma": "es5",
+  "prettier.disableLanguages": [],
+  "prettier.printWidth": 100,
 
   "python.linting.pylintEnabled": true,
   "python.linting.pylintArgs": ["----contextmanager-decorators=contextlib.contextmanager"],
@@ -13,18 +23,13 @@
   "python.linting.flake8Path": "/home/sergej/.local/bin/flake8",
   "python.formatting.autopep8Args": ["--max-line-length=100"],
   "python.formatting.autopep8Path": "/home/sergej/.local/bin/autopep8",
+
   "gitlens.currentLine.enabled": false,
   "gitlens.hovers.enabled": false,
   "gitlens.codeLens.enabled": false,
   "gitlens.statusBar.enabled": false,
-  "prettier.printWidth": 100,
-  "explorer.confirmDragAndDrop": false,
-  "window.zoomLevel": 1,
-  "files.associations": {
-    "*.sql": "sql"
-  },
-  "extensions.ignoreRecommendations": false,
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "vs-kubernetes": {
+    "disable-linters": ["resource-limits"],
+    "vs-kubernetes.minikube-path": "/home/sergej/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
   }
 }
