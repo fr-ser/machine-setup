@@ -5,6 +5,9 @@
 # Python
 __pycache__
 
+# pyenv
+.python-version
+
 ## Unit test / coverage reports
 htmlcov/
 .tox/
