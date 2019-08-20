@@ -30,7 +30,7 @@ if [ -z "$TMUX" ]; then
     if [ -n "$attach_session" ]; then
         tmux attach -t "$attach_session"
     else
-	tmux
+        tmux
     fi
 fi
 
@@ -60,4 +60,7 @@ export NVM_DIR="$HOME/.nvm"
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+
+# add golang to path
+export PATH=$PATH:/usr/local/go/bin
 
