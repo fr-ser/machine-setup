@@ -29,7 +29,22 @@
   "gitlens.codeLens.enabled": false,
   "gitlens.statusBar.enabled": false,
   "vs-kubernetes": {
-    "disable-linters": ["resource-limits"],
+    "disable-linters": [
+      "resource-limits"
+    ],
     "vs-kubernetes.minikube-path": "/home/sergej/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
-  }
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always"
 }
