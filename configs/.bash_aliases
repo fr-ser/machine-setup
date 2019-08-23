@@ -31,3 +31,9 @@ EOM
 }
 
 alias docker-kill-all='docker-all stop && docker-all rm'
+
+# kubectl
+alias k="kubectl"
+
+# standard bash commands
+alias l="ls -lah"
