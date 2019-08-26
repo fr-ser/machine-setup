@@ -1,3 +1,6 @@
+# General ignored files
+*.gitignore.*
+
 # editors/IDEs
 .vscode
 .idea
