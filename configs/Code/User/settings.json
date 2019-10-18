@@ -1,4 +1,5 @@
 {
+  "workbench.editor.enablePreview": false,
   "editor.formatOnSave": true,
   "terminal.integrated.fontWeight": "600",
   "editor.rulers": [
@@ -6,7 +7,7 @@
   ],
   "extensions.ignoreRecommendations": false,
   "explorer.confirmDragAndDrop": false,
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
   "files.associations": {
     "*.sql": "sql"
   },
@@ -52,5 +53,6 @@
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
   "go.coverOnSave": false,
-  "go.formatTool": "goimports"
+  "go.formatTool": "goimports",
+  "workbench.startupEditor": "newUntitledFile"
 }
