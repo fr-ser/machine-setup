@@ -9,25 +9,12 @@ alias prp="pipenv run python"
 
 # Docker Quality of live
 docker-all() {
-    local USAGE=""
-    read -r -d '' USAGE <<EOM
-        This bash function exectures a docker command against different containers.
-        Usage: docker-all <cmd> <opts>
-        <cmd>: Can be any docker command (such as kill, stop, rm)
-        <opts>:
-                "-A": Disables "-a" ond docker ps (only run command against running containers)
-EOM
+    docker "$1" $(docker ps -aq)
+}
 
-    if [[ "$1" == "-h" || "$1" == "--help" ]]
-    then
-        echo $USAGE
-    elif [[ "$2" != "-A" ]]
-    then
-        docker "$1" $(docker ps -aq)
-    else
-        # "Q" was passed as an argument, don't use quiet mode
-        docker "$1" $(docker ps -q)
-    fi
+# Common ps grep
+psgrep() {
+    ps aux | grep "$1"
 }
 
 alias docker-kill-all='docker-all stop && docker-all rm'
