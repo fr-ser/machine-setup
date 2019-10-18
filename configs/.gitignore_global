@@ -27,3 +27,8 @@ coverage.xml
 
 # Node.Js
 node_modules
+
+# Direnv stuff
+.direnv
+.envrc
+

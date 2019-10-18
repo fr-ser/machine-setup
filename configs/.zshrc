@@ -64,3 +64,8 @@ fi
 # add golang to path
 export PATH=$PATH:/usr/local/go/bin
 
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# add direnv hook
+eval "$(direnv hook zsh)"
