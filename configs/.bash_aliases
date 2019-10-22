@@ -12,12 +12,17 @@ docker-all() {
     docker "$1" $(docker ps -aq)
 }
 
+docker-clean-slate() {
+    docker kill $(docker ps -q)
+    docker rm $(docker ps -aq)
+    docker system prune -f --volumes
+}
+
+
 # Common ps grep
 psgrep() {
     ps aux | grep "$1"
 }
-
-alias docker-kill-all='docker-all stop && docker-all rm'
 
 # kubectl
 alias k="kubectl"
