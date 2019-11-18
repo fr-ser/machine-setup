@@ -4,6 +4,7 @@ cp ~/.bash_aliases ./configs/.bash_aliases
 cp ~/.zshrc ./configs/.zshrc
 cp ~/.zshenv ./configs/.zshenv
 cp ~/.vimrc ./configs/.vimrc
+cp ~/.prettierrc ./configs/.prettierrc
 cp ~/.tmux.conf ./configs/.tmux.conf
 cp ~/.tmux/.tmuxline_snapshot ./configs/.tmuxline_snapshot
 cp ~/.gitconfig ./configs/.gitconfig

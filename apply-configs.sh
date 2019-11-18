@@ -5,6 +5,7 @@ cp ./configs/.gitignore_global ~/.gitignore_global
 sudo cp ./git_commands/git-graph /usr/local/bin/git-graph
 sudo cp ./git_commands/git-push-new /usr/local/bin/git-push-new
 cp ./configs/.zshrc ~/.zshrc
+cp ./configs/.prettierrc ~/.prettierrc
 cp ./configs/.zshenv ~/.zshenv
 cp ./configs/.vimrc ~/.vimrc
 cp ./configs/.gitconfig ~/.gitconfig

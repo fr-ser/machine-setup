@@ -12,9 +12,7 @@
     "*.sql": "sql"
   },
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "prettier.trailingComma": "es5",
   "prettier.disableLanguages": [],
-  "prettier.printWidth": 100,
   "python.linting.pylintEnabled": true,
   "python.linting.pylintArgs": [
     "----contextmanager-decorators=contextlib.contextmanager"
