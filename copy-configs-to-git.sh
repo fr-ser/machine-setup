@@ -15,3 +15,4 @@ cp ~/.oh-my-zsh/custom/themes/robbyrussell.zsh-theme ./configs/robbyrussell.zsh-
 cp -r ~/.gitconfs/* ./configs/.gitconfs/
 cp -r ~/.config/powerline/* ./configs/powerline/
 cp ~/.config/Code/User/settings.json ./configs/Code/User/settings.json
+cp /usr/bin/dmenu_run ./configs/dmenu_run

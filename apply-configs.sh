@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 cp ./configs/.bash_aliases ~/.bash_aliases
 cp ./configs/.gitignore_global ~/.gitignore_global
 sudo cp ./git_commands/git-graph /usr/local/bin/git-graph
@@ -20,5 +22,6 @@ cp -r ./configs/powerline/ ~/.config/
 mkdir -p ~/.config/Code/User/
 cp ./configs/Code/User/settings.json ~/.config/Code/User/settings.json
 cp ./shell_scripts/* ~/.local/bin
+sudo cp ./configs/dmenu_run /usr/bin/dmenu_run
 
 echo "Configs applied. All good"
