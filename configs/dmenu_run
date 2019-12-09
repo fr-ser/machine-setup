@@ -10,6 +10,7 @@ code
 spotify
 KeeWeb
 nautilus
+slack
 "
 
 echo $DMENU_WHITELIST | sed 's*\s*\n*g' | dmenu "$@" | ${SHELL:-"/bin/sh"} &
