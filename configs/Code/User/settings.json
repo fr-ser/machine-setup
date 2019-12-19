@@ -26,6 +26,10 @@
     "--max-line-length=100"
   ],
   "python.formatting.autopep8Path": "/home/sergej/.local/bin/autopep8",
+  "python.testing.unittestEnabled": false,
+  "python.testing.nosetestsEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "python.testing.autoTestDiscoverOnSaveEnabled": false,
   "gitlens.currentLine.enabled": false,
   "gitlens.hovers.enabled": false,
   "gitlens.codeLens.enabled": false,
