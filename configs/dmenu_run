@@ -1,9 +1,9 @@
 #!/bin/sh
 
 DMENU_WHITELIST="
+google-chrome
 sergej-chrome.sh
 zlab-chrome.sh
-google-chrome.sh
 firefox
 pycharm-community
 code
@@ -11,6 +11,7 @@ spotify
 KeeWeb
 nautilus
 slack
+dbeaver
 "
 
-echo $DMENU_WHITELIST | sed 's*\s*\n*g' | dmenu "$@" | ${SHELL:-"/bin/sh"} &
+echo $DMENU_WHITELIST | sed 's*\s*\n*g' | dmenu -i | ${SHELL:-"/bin/sh"} &
