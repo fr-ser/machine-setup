@@ -1,5 +1,5 @@
 {
-  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreview": true,
   "editor.formatOnSave": true,
   "editor.rulers": [
     100
