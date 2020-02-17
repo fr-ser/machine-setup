@@ -1,19 +1,20 @@
 #!/usr/bin/env bash
 
+curr_dir=$(pwd)
+
 # basic utilities
 sudo apt-get install -y zsh curl vim git tmux fonts-powerline xsel ncdu htop dmenu direnv jump
-# developer features for pyenv
-sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
-libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
-xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
 sudo apt-get upgrade -y
 sudo apt-get autoremove -y
 
-# install pyenv
-git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-
 # install vundle (vim package manager)
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+# install asdf version manager
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+cd ~/.asdf
+git checkout "$(git describe --abbrev=0 --tags)"
+cd ${curr_dir}
 
 # install node-version-manager (nvm)
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash

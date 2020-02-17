@@ -8,18 +8,6 @@ ZSH_THEME="robbyrussell"
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
-# User configuration
-
-# Preferred editor for local and remote sessions
-export EDITOR='vim'
-
-# ssh
-export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-export TERM="xterm-256color"
-
 ZSH_TMUX_AUTOSTART=false
 # start tmux if a session is unattached and connect to the first unattached session
 if [ -z "$TMUX" ]; then
@@ -91,5 +79,5 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
-eval "$(jump shell)"
-
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash

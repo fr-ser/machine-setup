@@ -9,6 +9,7 @@ cp ~/.tmux.conf ./configs/.tmux.conf
 cp ~/.tmux/.tmuxline_snapshot ./configs/.tmuxline_snapshot
 cp ~/.gitconfig ./configs/.gitconfig
 cp ~/.gitignore_global ./configs/.gitignore_global
+cp ~/.default-python-packages ./configs/.default-python-packages
 cp /usr/local/bin/git-graph ./git_commands/git-graph
 cp /usr/local/bin/git-push-new ./git_commands/git-push-new
 cp ~/.oh-my-zsh/custom/themes/robbyrussell.zsh-theme ./configs/robbyrussell.zsh-theme

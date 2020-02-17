@@ -8,9 +8,6 @@
 # Python
 __pycache__
 
-# pyenv
-.python-version
-
 ## Unit test / coverage reports
 htmlcov/
 .tox/
@@ -24,6 +21,8 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 
+## iPython / Jupyter Notebooks
+.ipynb_checkpoints
 
 # Node.Js
 node_modules
@@ -32,3 +31,6 @@ node_modules
 .direnv
 .envrc
 
+# version managers
+.tool-versions
+.python-version

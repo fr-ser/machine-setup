@@ -1,9 +1,11 @@
-export PYENV_ROOT="$HOME/.pyenv"
-
-export PATH="$PYENV_ROOT/bin:$PATH"
-
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
-
 export GOPATH="$HOME/go"
+
+# Preferred editor for local and remote sessions
+export EDITOR='vim'
+
+# ssh
+export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export TERM="xterm-256color"

@@ -11,6 +11,7 @@ cp ./configs/.prettierrc ~/.prettierrc
 cp ./configs/.zshenv ~/.zshenv
 cp ./configs/.vimrc ~/.vimrc
 cp ./configs/.gitconfig ~/.gitconfig
+cp ./configs/.default-python-packages ~/.default-python-packages
 mkdir -p ~/.tmux/
 cp ./configs/.tmuxline_snapshot ~/.tmux/.tmuxline_snapshot
 cp ./configs/.tmux.conf ~/.tmux.conf
