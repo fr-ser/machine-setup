@@ -16,9 +16,6 @@ cd ~/.asdf
 git checkout "$(git describe --abbrev=0 --tags)"
 cd ${curr_dir}
 
-# install node-version-manager (nvm)
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
-
 # install oh-my-zsh
 rm -rf ~/.oh-my-zsh
 curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash
