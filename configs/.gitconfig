@@ -3,7 +3,7 @@
 
 [includeIf "gitdir:~/z_lab_repos/"]
   path = ~/.gitconfs/z_lab.gitconfig
-[includeIf "gitdir:~/priv_dev/"]
+[includeIf "gitdir:~/github/"]
   path = ~/.gitconfs/private.gitconfig
 [core]
 	editor = vim
