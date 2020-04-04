@@ -2,7 +2,13 @@
   "workbench.editor.enablePreview": true,
   "editor.formatOnSave": true,
   "editor.rulers": [
-    100
+    {
+      "column": 72
+    },
+    {
+      "column": 99,
+      "color": "#E74C3C"
+    }
   ],
   "extensions.ignoreRecommendations": false,
   "explorer.confirmDragAndDrop": false,
@@ -19,13 +25,7 @@
   ],
   "python.linting.pylintPath": "/home/sergej/.local/bin/pylint",
   "python.linting.flake8Enabled": true,
-  "python.linting.flake8Args": [
-    "--max-line-length=100"
-  ],
   "python.linting.flake8Path": "/home/sergej/.local/bin/flake8",
-  "python.formatting.autopep8Args": [
-    "--max-line-length=100"
-  ],
   "python.formatting.autopep8Path": "/home/sergej/.local/bin/autopep8",
   "python.testing.unittestEnabled": false,
   "python.testing.nosetestsEnabled": false,
@@ -35,12 +35,6 @@
   "gitlens.hovers.enabled": false,
   "gitlens.codeLens.enabled": false,
   "gitlens.statusBar.enabled": false,
-  "vs-kubernetes": {
-    "disable-linters": [
-      "resource-limits"
-    ],
-    "vs-kubernetes.minikube-path": "/home/sergej/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
-  },
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -54,8 +48,69 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
+  "turboConsoleLog.logMessagePrefix": "TCL",
   "go.coverOnSave": false,
   "go.formatTool": "goimports",
   "workbench.startupEditor": "newUntitledFile",
-  "diffEditor.ignoreTrimWhitespace": false
+  "diffEditor.ignoreTrimWhitespace": false,
+  "autoDocstring.docstringFormat": "sphinx",
+  "cSpell.userWords": [
+    "Klickrent",
+    "PYPI",
+    "PYTHONPATH",
+    "Pipfile",
+    "Sergej",
+    "amazonaws",
+    "asyncio",
+    "asyncpg",
+    "botocore",
+    "camptocamp",
+    "chdir",
+    "chmod",
+    "circleci",
+    "coro",
+    "direnv",
+    "dotenv",
+    "entrypoint",
+    "envrc",
+    "from",
+    "getcurrent",
+    "gunicorn",
+    "hardcoded",
+    "httpretty",
+    "itertools",
+    "jsonify",
+    "junit",
+    "kube",
+    "kubeconfig",
+    "kubectl",
+    "kubernetes",
+    "mixins",
+    "mqtt",
+    "noqa",
+    "opcua",
+    "paho",
+    "pgdg",
+    "pipenv",
+    "postgres",
+    "postgresql",
+    "psycopg",
+    "pyarrow",
+    "pydict",
+    "pyenv",
+    "pytest",
+    "rtype",
+    "semtag",
+    "setuptools",
+    "sqlite",
+    "strftime",
+    "tqdm",
+    "tzinfo",
+    "unmocked",
+    "virtualenvs",
+    "wsgi",
+    "wurstmeister",
+    "xunit",
+    "zlab"
+  ]
 }
