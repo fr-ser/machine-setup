@@ -10,6 +10,9 @@ sudo apt-get autoremove -y
 # install vundle (vim package manager)
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
+# install tmux plugin manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 # install asdf version manager
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 cd ~/.asdf

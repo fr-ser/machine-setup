@@ -19,7 +19,6 @@ mkdir -p ~/.oh-my-zsh/custom/themes/
 cp ./configs/robbyrussell.zsh-theme ~/.oh-my-zsh/custom/themes/robbyrussell.zsh-theme
 cp -r ./configs/.gitconfs/ ~/
 mkdir -p ~/.config/
-cp -r ./configs/powerline/ ~/.config/
 mkdir -p ~/.config/Code/User/
 cp ./configs/Code/User/settings.json ~/.config/Code/User/settings.json
 cp ./configs/Code/User/keybindings.json ~/.config/Code/User/keybindings.json
