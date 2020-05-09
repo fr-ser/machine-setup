@@ -5,6 +5,8 @@
   path = ~/.gitconfs/z_lab.gitconfig
 [includeIf "gitdir:~/github/"]
   path = ~/.gitconfs/private.gitconfig
+[includeIf "gitdir:~/Desktop/"]
+  path = ~/.gitconfs/private.gitconfig
 [core]
 	editor = vim
 	excludesfile = /home/sergej/.gitignore_global

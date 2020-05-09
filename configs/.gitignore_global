@@ -3,6 +3,8 @@
 
 # editors/IDEs
 .vscode
+.vsls.json
+
 .idea
 
 # Python
