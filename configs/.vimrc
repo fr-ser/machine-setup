@@ -22,6 +22,18 @@ filetype plugin indent on    " required
 let g:airline_powerline_fonts = 1
 let g:tmuxline_powerline_separators = 1
 
+let g:tmuxline_preset = {
+    \'a'    : '#S',
+    \'cwin' : '#I|#W',
+    \'win'  : '#I|#W',
+    \'x'    : '#(~/.tmux/status_cpu.zsh) | #(~/.tmux/status_memory.sh)',
+    \'y'    : '%Y-%m-%d %H:%M',
+    \'z'    : '#H',
+    \'options': {
+        \'status-justify': 'left'
+    \}
+\}
+
 " NERDTree configs
 " autocmd VimEnter * NERDTree
 " autocmd VimEnter * wincmd p

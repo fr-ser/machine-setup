@@ -5,8 +5,10 @@ cp ~/.zshrc ./configs/.zshrc
 cp ~/.zshenv ./configs/.zshenv
 cp ~/.vimrc ./configs/.vimrc
 cp ~/.prettierrc ./configs/.prettierrc
-cp ~/.tmux.conf ./configs/.tmux.conf
-cp ~/.tmux/.tmuxline_snapshot ./configs/.tmuxline_snapshot
+cp ~/.tmux.conf ./configs/tmux/.tmux.conf
+cp ~/.tmux/.tmuxline_snapshot ./configs/tmux/.tmuxline_snapshot
+cp ~/.tmux/status_cpu.zsh ./configs/tmux/status_cpu.zsh
+cp ~/.tmux/status_memory.sh ./configs/tmux/status_memory.sh
 cp ~/.gitconfig ./configs/.gitconfig
 cp ~/.gitignore_global ./configs/.gitignore_global
 cp ~/.default-python-packages ./configs/.default-python-packages

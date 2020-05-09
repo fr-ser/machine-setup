@@ -13,8 +13,10 @@ cp ./configs/.vimrc ~/.vimrc
 cp ./configs/.gitconfig ~/.gitconfig
 cp ./configs/.default-python-packages ~/.default-python-packages
 mkdir -p ~/.tmux/
-cp ./configs/.tmuxline_snapshot ~/.tmux/.tmuxline_snapshot
-cp ./configs/.tmux.conf ~/.tmux.conf
+cp ./configs/tmux/.tmux.conf ~/.tmux.conf
+cp ./configs/tmux/.tmuxline_snapshot ~/.tmux/.tmuxline_snapshot
+cp ./configs/tmux/status_cpu.zsh ~/.tmux/status_cpu.zsh
+cp ./configs/tmux/status_memory.sh ~/.tmux/status_memory.sh
 mkdir -p ~/.oh-my-zsh/custom/themes/
 cp ./configs/robbyrussell.zsh-theme ~/.oh-my-zsh/custom/themes/robbyrussell.zsh-theme
 cp -r ./configs/.gitconfs/ ~/
