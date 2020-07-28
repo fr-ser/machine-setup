@@ -3,7 +3,7 @@
 curr_dir=$(pwd)
 
 # basic utilities
-sudo apt-get install -y zsh curl vim git tmux fonts-powerline xsel ncdu htop dmenu direnv jump
+sudo apt-get install -y zsh curl vim git tmux fonts-powerline xsel ncdu htop dmenu direnv
 sudo apt-get upgrade -y
 sudo apt-get autoremove -y
 
