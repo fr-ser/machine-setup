@@ -1,12 +1,6 @@
 [user]
 	name = Sergej Herbert
-
-[includeIf "gitdir:~/z_lab_repos/"]
-  path = ~/.gitconfs/z_lab.gitconfig
-[includeIf "gitdir:~/github/"]
-  path = ~/.gitconfs/private.gitconfig
-[includeIf "gitdir:~/Desktop/"]
-  path = ~/.gitconfs/private.gitconfig
+	email = herbert.sergej@gmail.com
 [core]
 	editor = vim
 	excludesfile = /home/sergej/.gitignore_global
