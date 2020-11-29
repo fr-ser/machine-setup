@@ -54,3 +54,8 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 eval "$(direnv hook zsh)"
 
 . $HOME/.asdf/asdf.sh
+. ~/.asdf/plugins/java/set-java-home.zsh
+
+PROG=db-migrations
+_CLI_ZSH_AUTOCOMPLETE_HACK=1
+source  ~/.config/db-migrations/zsh_autocomplete.txt
