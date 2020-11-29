@@ -2,7 +2,7 @@
 	name = Sergej Herbert
 	email = herbert.sergej@gmail.com
 [core]
-	editor = vim
+	editor = code --wait
 	excludesfile = /home/sergej/.gitignore_global
 [pager]
 	branch = false

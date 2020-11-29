@@ -4,7 +4,6 @@
 # editors/IDEs
 .vscode
 .vsls.json
-
 .idea
 
 # formatting
@@ -17,3 +16,6 @@
 # version managers
 .tool-versions
 .python-version
+
+# python stuff
+.venv
