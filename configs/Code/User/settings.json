@@ -18,8 +18,17 @@
     "*.envrc": "shellscript",
     "*.avsc": "json"
   },
+
+  "files.exclude": {
+    "**/.venv": true,
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "files.autoSave": "onFocusChange",
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "prettier.disableLanguages": [],
+  "prettier.disableLanguages": ["markdown"],
   "python.linting.pylintEnabled": true,
   "python.linting.pylintArgs": ["----contextmanager-decorators=contextlib.contextmanager"],
   "python.linting.pylintPath": "/home/sergej/.local/bin/pylint",
@@ -40,11 +49,24 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
   "turboConsoleLog.logMessagePrefix": "TCL",
@@ -52,34 +74,39 @@
   "go.formatTool": "goimports",
   "workbench.startupEditor": "newUntitledFile",
   "diffEditor.ignoreTrimWhitespace": false,
-  "autoDocstring.docstringFormat": "sphinx",
   "cSpell.userWords": [
-    "ADWORDS",
-    "Klickrent",
     "PYPI",
     "PYTHONPATH",
     "Pipfile",
     "Popen",
-    "Rabbitmq",
+    "Replicaset",
     "Sergej",
+    "VENV",
     "amazonaws",
     "asyncio",
     "asyncpg",
     "boto",
     "botocore",
     "camptocamp",
+    "chartmuseum",
     "chdir",
     "chmod",
     "circleci",
     "coro",
+    "datasource",
+    "datasources",
+    "deduplicated",
     "deduplication",
     "delenv",
     "direnv",
     "dotenv",
+    "elif",
     "entrypoint",
     "envrc",
     "from",
+    "frser",
     "getcurrent",
+    "grafana",
     "groupby",
     "gunicorn",
     "hardcoded",
@@ -109,6 +136,9 @@
     "pydict",
     "pyenv",
     "pytest",
+    "rebalance",
+    "rebalances",
+    "repos",
     "rtype",
     "semtag",
     "setuptools",
@@ -121,6 +151,7 @@
     "timestamptz",
     "tqdm",
     "tzinfo",
+    "tzutc",
     "unmocked",
     "virtualenvs",
     "werkzeug",
@@ -131,5 +162,15 @@
   ],
   "liveshare.openSharedServers": false,
   "go.useLanguageServer": true,
-  "terminal.integrated.shell.linux": "/usr/bin/bash"
+  "terminal.integrated.shell.linux": "/usr/bin/bash",
+  "githubIssues.queries": [
+    {
+      "label": "My Issues",
+      "query": "default"
+    },
+    {
+      "label": "Created Issues",
+      "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
+    }
+  ]
 }
