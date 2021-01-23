@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 
+set -e
+
 curr_dir=$(pwd)
 
+sudo apt update
 # basic utilities
-sudo apt-get install -y zsh curl sysstat jq vim git tmux fonts-powerline xsel ncdu htop dmenu direnv
-sudo apt-get upgrade -y
-sudo apt-get autoremove -y
+sudo apt install -y zsh curl sysstat jq vim git tmux fonts-powerline xsel ncdu htop dmenu direnv
+sudo apt upgrade -y
+sudo apt autoremove -y
 
 # install vundle (vim package manager)
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -29,4 +32,15 @@ make apply_configurations
 # install vim plugins (after config copied)
 vim +PluginInstall +qall
 
-echo "You have to install docker"
+# docker
+echo "Trying to install docker. This is a bit brittele"
+sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+sudo groupadd docker || true
+sudo usermod -aG docker $USER
+echo "To run docker without sudo you need to log out and back in"
+sudo curl -L "https://github.com/docker/compose/releases/download/1.28.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
