@@ -3,7 +3,7 @@
 curr_dir=$(pwd)
 
 # basic utilities
-sudo apt-get install -y zsh curl vim git tmux fonts-powerline xsel ncdu htop dmenu direnv
+sudo apt-get install -y zsh curl sysstat jq vim git tmux fonts-powerline xsel ncdu htop dmenu direnv
 sudo apt-get upgrade -y
 sudo apt-get autoremove -y
 
@@ -24,7 +24,7 @@ rm -rf ~/.oh-my-zsh
 curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash
 
 # applying the configs, especially useful because oh-my-zsh overwrites stuff
-source ./apply-configs.sh
+make apply_configurations
 
 # install vim plugins (after config copied)
 vim +PluginInstall +qall
