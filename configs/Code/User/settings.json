@@ -172,5 +172,10 @@
       "label": "Created Issues",
       "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
     }
-  ]
+  ],
+  "files.watcherExclude": {
+    "**/.bloop": true,
+    "**/.metals": true,
+    "**/.ammonite": true
+  }
 }

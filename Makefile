@@ -1,5 +1,6 @@
 apply_configurations:
 	cp ./configs/.bash_aliases ~/.bash_aliases
+	cp ./configs/.bashrc ~/.bashrc
 	cp ./configs/.gitignore_global ~/.gitignore_global
 	sudo cp ./git_commands/git-graph /usr/local/bin/git-graph
 	sudo cp ./git_commands/git-push-new /usr/local/bin/git-push-new
@@ -28,6 +29,7 @@ apply_configurations:
 
 copy_configurations_to_git:
 	cp ~/.bash_aliases ./configs/.bash_aliases
+	cp ~/.bashrc ./configs/.bashrc
 	cp ~/.zshrc ./configs/.zshrc
 	cp ~/.zshenv ./configs/.zshenv
 	cp ~/.vimrc ./configs/.vimrc
