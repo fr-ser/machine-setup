@@ -1,0 +1,44 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Unit Tests",
+      "type": "python",
+      "request": "launch",
+      "module": "pytest",
+      "args": ["tests/unit"],
+      "envFile": "${workspaceFolder}/.vscode/launch.env",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src:$PYTHONPATH"
+      },
+      "justMyCode": false
+    },
+    {
+      "name": "Python: Behave Tests",
+      "type": "python",
+      "request": "launch",
+      "module": "behave",
+      "args": ["tests/e2e", "-q"],
+      "envFile": "${workspaceFolder}/.vscode/launch.env",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src:$PYTHONPATH"
+      },
+      "justMyCode": false
+    },
+    {
+      "name": "app-module",
+      "type": "python",
+      "request": "launch",
+      "module": "faust",
+      "args": ["-A", "aggregator", "worker", "--without-web", "-l", "info"],
+      "envFile": "${workspaceFolder}/.vscode/launch.env",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src:${PYTHONPATH}"
+      },
+      "justMyCode": true
+    }
+  ]
+}
