@@ -11,7 +11,7 @@ KeeWeb
 nautilus
 slack
 dbeaver
-etcher
+intellij-idea-community
 "
 
 echo $DMENU_WHITELIST | sed 's*\s*\n*g' | dmenu -i | ${SHELL:-"/bin/sh"} &
