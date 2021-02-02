@@ -5,6 +5,7 @@
 .vscode
 .vsls.json
 .idea
+*.iml
 
 # formatting
 .prettierrc

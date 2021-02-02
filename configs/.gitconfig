@@ -4,5 +4,8 @@
 [core]
 	editor = code --wait
 	excludesfile = /home/sergej/.gitignore_global
+	autocrlf = input
 [pager]
 	branch = false
+[pull]
+	ff = only

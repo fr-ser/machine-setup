@@ -177,5 +177,6 @@
     "**/.bloop": true,
     "**/.metals": true,
     "**/.ammonite": true
-  }
+  },
+  "java.project.importHint": false
 }
