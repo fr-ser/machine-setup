@@ -2,8 +2,8 @@
 
 DMENU_WHITELIST="
 google-chrome
-sergej-chrome.sh
-zlab-chrome.sh
+personal-google-chrome.sh
+work-google-chrome.sh
 firefox
 code
 spotify
