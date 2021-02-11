@@ -9,7 +9,8 @@ sudo apt update
 sudo apt install -y \
     zsh curl sysstat jq vim git tmux fonts-powerline xsel ncdu htop dmenu direnv sqlite3 make
 # packages to build python
-sudo apt install --no-install-recommends build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev \
+sudo apt install -y --no-install-recommends \
+    build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev \
     libreadline-dev libffi-dev wget python3-dev libsqlite3-dev libbz2-dev llvm xz-utils tk-dev \
     libxml2-dev libxmlsec1-dev liblzma-dev
 
@@ -40,11 +41,11 @@ vim +PluginInstall +qall
 
 # docker
 echo "Trying to install docker. This is a bit brittele"
-sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+sudo apt install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io
+sudo apt update -y
+sudo apt install -y docker-ce docker-ce-cli containerd.io
 sudo groupadd docker || true
 sudo usermod -aG docker $USER
 echo "To run docker without sudo you need to log out and back in"
