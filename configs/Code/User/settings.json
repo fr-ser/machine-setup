@@ -12,7 +12,6 @@
   ],
   "extensions.ignoreRecommendations": false,
   "explorer.confirmDragAndDrop": false,
-  "window.zoomLevel": 0,
   "files.associations": {
     "*.sql": "sql",
     "*.envrc": "shellscript",
@@ -37,10 +36,18 @@
   "python.linting.flake8Path": "~/.local/bin/flake8",
   "python.formatting.autopep8Path": "~/.local/bin/autopep8",
   "python.formatting.blackPath": "~/.local/bin/black",
+  "python.formatting.blackArgs": ["--line-length", "99"],
   "python.testing.unittestEnabled": false,
   "python.testing.nosetestsEnabled": false,
   "python.testing.pytestEnabled": false,
   "python.testing.autoTestDiscoverOnSaveEnabled": false,
+  "python.formatting.provider": "black",
+  "python.linting.ignorePatterns": [
+    ".vscode/*.py",
+    "**/site-packages/**/*.py",
+    "**/.asdf",
+    "**/.venv"
+  ],
   "gitlens.currentLine.enabled": false,
   "gitlens.hovers.enabled": false,
   "gitlens.codeLens.enabled": false,
@@ -112,6 +119,7 @@
     "groupby",
     "gunicorn",
     "hardcoded",
+    "htpasswd",
     "httpretty",
     "itertools",
     "jsonify",
@@ -165,16 +173,9 @@
   "liveshare.openSharedServers": false,
   "go.useLanguageServer": true,
   "terminal.integrated.shell.linux": "/usr/bin/bash",
-  "githubIssues.queries": [
-    {
-      "label": "My Issues",
-      "query": "default"
-    },
-    {
-      "label": "Created Issues",
-      "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
-    }
-  ],
+  "markdownlint.config": {
+    "MD024": false
+  },
   "files.watcherExclude": {
     "**/.ammonite": true,
     "**/.asdf": true,
@@ -182,12 +183,5 @@
     "**/.metals": true,
     "**/.venv": true
   },
-  "java.project.importHint": false,
-  "python.formatting.provider": "black",
-  "python.linting.ignorePatterns": [
-    ".vscode/*.py",
-    "**/site-packages/**/*.py",
-    "**/.asdf",
-    "**/.venv"
-  ]
+  "java.project.importHint": false
 }
