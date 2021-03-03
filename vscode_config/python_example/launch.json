@@ -5,7 +5,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Python: Unit Tests",
+      "name": "unit tests",
       "type": "python",
       "request": "launch",
       "module": "pytest",
@@ -17,7 +17,7 @@
       "justMyCode": false
     },
     {
-      "name": "Python: Behave Tests",
+      "name": "behave tests",
       "type": "python",
       "request": "launch",
       "module": "behave",
@@ -37,6 +37,17 @@
       "envFile": "${workspaceFolder}/.vscode/launch.env",
       "env": {
         "PYTHONPATH": "${workspaceFolder}/src:${PYTHONPATH}"
+      },
+      "justMyCode": true
+    },
+    {
+      "name": "app",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/app.py",
+      "envFile": "${workspaceFolder}/.vscode/launch.env",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src:$PYTHONPATH"
       },
       "justMyCode": true
     }
