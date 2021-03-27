@@ -1,64 +1,5 @@
 {
-  "workbench.editor.enablePreview": true,
-  "editor.formatOnSave": true,
-  "editor.rulers": [
-    {
-      "column": 72
-    },
-    {
-      "column": 99,
-      "color": "#E74C3C"
-    }
-  ],
-  "extensions.ignoreRecommendations": false,
-  "explorer.confirmDragAndDrop": false,
-  "files.associations": {
-    "*.sql": "sql",
-    "*.envrc": "shellscript",
-    "*.avsc": "json"
-  },
-
-  "files.exclude": {
-    "**/.asdf": true,
-    "**/.classpath": true,
-    "**/.factorypath": true,
-    "**/.project": true,
-    "**/.settings": true,
-    "**/.venv": true
-  },
-  "files.autoSave": "onFocusChange",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "prettier.disableLanguages": ["markdown"],
-  "python.linting.pylintEnabled": true,
-  "python.linting.pylintArgs": ["----contextmanager-decorators=contextlib.contextmanager"],
-  "python.linting.pylintPath": "~/.local/bin/pylint",
-  "python.linting.flake8Enabled": true,
-  "python.linting.flake8Path": "~/.local/bin/flake8",
-  "python.formatting.autopep8Path": "~/.local/bin/autopep8",
-  "python.formatting.blackPath": "~/.local/bin/black",
-  "python.formatting.blackArgs": ["--line-length", "99"],
-  "python.testing.unittestEnabled": false,
-  "python.testing.nosetestsEnabled": false,
-  "python.testing.pytestEnabled": false,
-  "python.testing.autoTestDiscoverOnSaveEnabled": false,
-  "python.formatting.provider": "black",
-  "python.linting.ignorePatterns": [
-    ".vscode/*.py",
-    "**/site-packages/**/*.py",
-    "**/.asdf",
-    "**/.venv"
-  ],
-  "gitlens.currentLine.enabled": false,
-  "gitlens.hovers.enabled": false,
-  "gitlens.codeLens.enabled": false,
-  "gitlens.statusBar.enabled": false,
-  "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
+  "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
@@ -67,40 +8,37 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[yaml]": {
-    "editor.formatOnSave": false,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "[markdown]": {
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
   },
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "turboConsoleLog.logMessagePrefix": "TCL",
-  "go.coverOnSave": false,
-  "go.formatTool": "goimports",
-  "workbench.startupEditor": "newUntitledFile",
-  "diffEditor.ignoreTrimWhitespace": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false
+  },
+  "autoDocstring.docstringFormat": "sphinx",
   "cSpell.userWords": [
     "PYPI",
     "PYTHONPATH",
     "Pipfile",
     "Popen",
-    "Replicaset",
-    "Sergej",
     "VENV",
-    "amazonaws",
+    "anonymized",
     "asyncio",
     "asyncpg",
-    "boto",
-    "botocore",
-    "camptocamp",
-    "chartmuseum",
+    "backoff",
     "chdir",
     "chmod",
     "circleci",
+    "configmap",
     "coro",
     "datasource",
     "datasources",
@@ -112,8 +50,6 @@
     "elif",
     "entrypoint",
     "envrc",
-    "from",
-    "frser",
     "getcurrent",
     "grafana",
     "groupby",
@@ -128,7 +64,6 @@
     "kubeconfig",
     "kubectl",
     "kubernetes",
-    "logbox",
     "mixins",
     "moto",
     "mqtt",
@@ -136,10 +71,10 @@
     "opcua",
     "openapi",
     "paho",
-    "pgdg",
     "pipenv",
     "postgres",
     "postgresql",
+    "println",
     "psql",
     "psycopg",
     "pyarrow",
@@ -159,22 +94,40 @@
     "terragrunt",
     "timeframe",
     "timestamptz",
-    "tqdm",
     "tzinfo",
     "tzutc",
     "unmocked",
     "virtualenvs",
-    "werkzeug",
-    "wsgi",
-    "wurstmeister",
-    "xunit",
-    "zlab"
+    "wifi",
+    "wsgi"
   ],
-  "liveshare.openSharedServers": false,
-  "go.useLanguageServer": true,
-  "terminal.integrated.shell.linux": "/usr/bin/bash",
-  "markdownlint.config": {
-    "MD024": false
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.formatOnSave": true,
+  "editor.rulers": [
+    {
+      "column": 72
+    },
+    {
+      "color": "#E74C3C",
+      "column": 99
+    }
+  ],
+  "editor.wordWrap": "on",
+  "explorer.confirmDragAndDrop": false,
+  "extensions.ignoreRecommendations": true,
+  "files.associations": {
+    "*.avsc": "json",
+    "*.envrc": "shellscript",
+    "*.sql": "sql"
+  },
+  "files.autoSave": "onFocusChange",
+  "files.exclude": {
+    "**/.asdf": true,
+    "**/.classpath": true,
+    "**/.factorypath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.venv": true
   },
   "files.watcherExclude": {
     "**/.ammonite": true,
@@ -183,5 +136,47 @@
     "**/.metals": true,
     "**/.venv": true
   },
-  "java.project.importHint": false
+  "gitlens.codeLens.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.enabled": false,
+  "gitlens.statusBar.enabled": false,
+  "go.coverOnSave": false,
+  "go.formatTool": "goimports",
+  "go.toolsManagement.autoUpdate": true,
+  "go.useLanguageServer": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "liveshare.openSharedServers": false,
+  "markdownlint.config": {
+    "MD024": false
+  },
+  "python.formatting.autopep8Path": "~/.local/bin/autopep8",
+  "python.formatting.blackArgs": ["--line-length", "99"],
+  "python.formatting.blackPath": "~/.local/bin/black",
+  "python.formatting.provider": "black",
+  "python.languageServer": "Pylance",
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Path": "~/.local/bin/flake8",
+  "python.linting.ignorePatterns": [
+    ".vscode/*.py",
+    "**/site-packages/**/*.py",
+    "**/.asdf",
+    "**/.venv"
+  ],
+  "python.linting.pylintArgs": ["--contextmanager-decorators=contextlib.contextmanager"],
+  "python.linting.pylintEnabled": false,
+  "python.linting.pylintPath": "~/.local/bin/pylint",
+  "python.testing.autoTestDiscoverOnSaveEnabled": false,
+  "python.testing.nosetestsEnabled": false,
+  "python.testing.pytestEnabled": false,
+  "python.testing.unittestEnabled": false,
+  "terminal.integrated.shell.linux": "/usr/bin/bash",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "workbench.editor.enablePreview": true,
+  "workbench.editorAssociations": [
+    {
+      "filenamePattern": "*.ipynb",
+      "viewType": "jupyter.notebook.ipynb"
+    }
+  ],
+  "workbench.startupEditor": "newUntitledFile"
 }
