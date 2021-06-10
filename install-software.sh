@@ -7,7 +7,8 @@ curr_dir=$(pwd)
 sudo apt update
 # basic utilities
 sudo apt install -y \
-    zsh curl sysstat jq vim git tmux fonts-powerline xsel ncdu htop dmenu direnv sqlite3 make
+    zsh curl sysstat jq vim git tmux fonts-powerline xsel ncdu htop dmenu direnv sqlite3 make \
+    chrome-gnome-shell
 # packages to build python
 sudo apt install -y --no-install-recommends \
     build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev \
@@ -40,7 +41,7 @@ make apply_configurations
 vim +PluginInstall +qall
 
 # docker
-echo "Trying to install docker. This is a bit brittele"
+echo "Trying to install docker. This is a bit brittle"
 echo ""
 sudo apt install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
