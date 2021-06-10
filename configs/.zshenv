@@ -15,4 +15,5 @@ export PATH=$PATH:~/bin:~/applications/kafka/bin
 
 export PIPENV_VENV_IN_PROJECT=1
 
-source ~/.zlab_env.sh
+mkdir -p ~/zeppelin
+source ~/zeppelin/.zeppelin_env.sh
