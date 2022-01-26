@@ -1,33 +1,48 @@
+.PHONY: help apply_configurations copy_configurations_to_git install_software
+
+help:
+	@grep -B1 -E "^[a-zA-Z0-9_-]+\:([^\=]|$$)" Makefile \
+		| grep -v -- -- \
+		| sed 'N;s/\n/###/' \
+		| sed -n 's/^#: \(.*\)###\(.*\):.*/\2:###\1/p' \
+		| column -t  -s '###'
+
+#: Applies the configuration from this repo to the machine
 apply_configurations:
+	@# shell configuration
 	cp ./configs/.bash_aliases ~/.bash_aliases
 	cp ./configs/.bashrc ~/.bashrc
+	cp ./configs/.zshrc ~/.zshrc
+	cp ./configs/.zshenv ~/.zshenv
+	mkdir -p ~/.oh-my-zsh/custom/themes/
+	cp ./configs/robbyrussell.zsh-theme ~/.oh-my-zsh/custom/themes/robbyrussell.zsh-theme
+
+	@# git configuration
 	cp ./configs/.gitignore_global ~/.gitignore_global
 	sudo cp ./git_commands/git-graph /usr/local/bin/git-graph
 	sudo cp ./git_commands/git-push-new /usr/local/bin/git-push-new
-	cp ./configs/.zshrc ~/.zshrc
-	cp ./configs/.prettierrc ~/.prettierrc
-	cp ./configs/.zshenv ~/.zshenv
-	cp ./configs/.vimrc ~/.vimrc
 	cp ./configs/.gitconfig ~/.gitconfig
-	cp ./configs/.default-python-packages ~/.default-python-packages
+	cp -r ./configs/.gitconfs/ ~/
+	
+	@# tmux configuration
 	mkdir -p ~/.tmux/
 	cp ./configs/tmux/.tmux.conf ~/.tmux.conf
 	cp ./configs/tmux/.tmuxline_snapshot ~/.tmux/.tmuxline_snapshot
 	cp ./configs/tmux/status_cpu.zsh ~/.tmux/status_cpu.zsh
 	cp ./configs/tmux/status_memory.sh ~/.tmux/status_memory.sh
-	mkdir -p ~/.oh-my-zsh/custom/themes/
-	cp ./configs/robbyrussell.zsh-theme ~/.oh-my-zsh/custom/themes/robbyrussell.zsh-theme
-	cp -r ./configs/.gitconfs/ ~/
-	mkdir -p ~/.config/
-	mkdir -p ~/.config/Code/User/
-	cp ./configs/Code/User/settings.json ~/.config/Code/User/settings.json
-	cp ./configs/Code/User/keybindings.json ~/.config/Code/User/keybindings.json
+	
+	cp ./configs/.prettierrc ~/.prettierrc
+	cp ./configs/.vimrc ~/.vimrc
+	cp ./configs/.default-python-packages ~/.default-python-packages
+	
+	@# shell scripts
 	mkdir -p ~/.local/bin
 	cp ./shell_scripts/* ~/.local/bin
 	sudo cp ./configs/dmenu_run /usr/bin/dmenu_run
 
 	@echo "Configs applied. All good"
 
+#: Copies the currently aplied configuration from this machine to this repo
 copy_configurations_to_git:
 	cp ~/.bash_aliases ./configs/.bash_aliases
 	cp ~/.bashrc ./configs/.bashrc
@@ -46,9 +61,7 @@ copy_configurations_to_git:
 	cp /usr/local/bin/git-push-new ./git_commands/git-push-new
 	cp ~/.oh-my-zsh/custom/themes/robbyrussell.zsh-theme ./configs/robbyrussell.zsh-theme
 	cp -r ~/.gitconfs/* ./configs/.gitconfs/
-	cp ~/.config/Code/User/settings.json ./configs/Code/User/settings.json
-	cp ~/.config/Code/User/keybindings.json ./configs/Code/User/keybindings.json
 	cp /usr/bin/dmenu_run ./configs/dmenu_run
 
 install_software:
-	./install-software.sh
+	.helper_scripts/install-software.sh
