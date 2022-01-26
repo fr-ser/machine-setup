@@ -1,11 +1,9 @@
-[user]
-	name = Sergej Herbert
-	email = herbert.sergej@gmail.com
 [core]
 	editor = code --wait
-	excludesfile = /home/sergej/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	autocrlf = input
 [pager]
 	branch = false
+	config = false
 [pull]
 	ff = only

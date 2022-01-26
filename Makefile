@@ -22,7 +22,6 @@ apply_configurations:
 	sudo cp ./git_commands/git-graph /usr/local/bin/git-graph
 	sudo cp ./git_commands/git-push-new /usr/local/bin/git-push-new
 	cp ./configs/.gitconfig ~/.gitconfig
-	cp -r ./configs/.gitconfs/ ~/
 	
 	@# tmux configuration
 	mkdir -p ~/.tmux/
@@ -35,10 +34,10 @@ apply_configurations:
 	cp ./configs/.vimrc ~/.vimrc
 	cp ./configs/.default-python-packages ~/.default-python-packages
 	
-	@# shell scripts
+	@# dmenu configuration and scripts
 	mkdir -p ~/.local/bin
-	cp ./shell_scripts/* ~/.local/bin
-	sudo cp ./configs/dmenu_run /usr/bin/dmenu_run
+	cp ./dmenu/*.sh ~/.local/bin
+	sudo cp ./dmenu/dmenu_run /usr/bin/dmenu_run
 
 	@echo "Configs applied. All good"
 
@@ -54,14 +53,13 @@ copy_configurations_to_git:
 	cp ~/.tmux/.tmuxline_snapshot ./configs/tmux/.tmuxline_snapshot
 	cp ~/.tmux/status_cpu.zsh ./configs/tmux/status_cpu.zsh
 	cp ~/.tmux/status_memory.sh ./configs/tmux/status_memory.sh
-	cp ~/.gitconfig ./configs/.gitconfig
+	cat ~/.gitconfig | sed -r '/(name|email|user)/d' > ./configs/.gitconfig
 	cp ~/.gitignore_global ./configs/.gitignore_global
 	cp ~/.default-python-packages ./configs/.default-python-packages
 	cp /usr/local/bin/git-graph ./git_commands/git-graph
 	cp /usr/local/bin/git-push-new ./git_commands/git-push-new
 	cp ~/.oh-my-zsh/custom/themes/robbyrussell.zsh-theme ./configs/robbyrussell.zsh-theme
-	cp -r ~/.gitconfs/* ./configs/.gitconfs/
-	cp /usr/bin/dmenu_run ./configs/dmenu_run
+	cp /usr/bin/dmenu_run ./dmenu/dmenu_run
 
 install_software:
 	.helper_scripts/install-software.sh

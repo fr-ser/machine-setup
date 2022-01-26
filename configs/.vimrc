@@ -8,10 +8,8 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'edkolev/tmuxline.vim'
-Plugin 'tpope/vim-surround'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -33,12 +31,6 @@ let g:tmuxline_preset = {
         \'status-justify': 'left'
     \}
 \}
-
-" NERDTree configs
-" autocmd VimEnter * NERDTree
-" autocmd VimEnter * wincmd p
-
-:map <C-e> :NERDTree<CR>
 
 syntax on
 set synmaxcol=2500	      " limit syntax highlighting on large files

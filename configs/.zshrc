@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/home/sergej/.oh-my-zsh"
+export ZSH="${HOME}/.oh-my-zsh"
 
 # Set name of the theme to load
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -30,7 +30,7 @@ source $ZSH/oh-my-zsh.sh
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(
-  git, bundler, ruby, rake, postgres, pyhton, node, tmux
+  git, bundler, postgres, python, node, tmux
 )
 
 # disable sharing of history between (tmux) terminals / panes
@@ -54,8 +54,3 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 eval "$(direnv hook zsh)"
 
 . $HOME/.asdf/asdf.sh
-. ~/.asdf/plugins/java/set-java-home.zsh
-
-PROG=db-migrations
-_CLI_ZSH_AUTOCOMPLETE_HACK=1
-source  ~/.config/db-migrations/zsh_autocomplete.txt
