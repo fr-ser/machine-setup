@@ -1,5 +1,3 @@
-.PHONY: help apply_configurations copy_configurations_to_git install_software
-
 help:
 	@grep -B1 -E "^[a-zA-Z0-9_-]+\:([^\=]|$$)" Makefile \
 		| grep -v -- -- \
@@ -8,7 +6,7 @@ help:
 		| column -t  -s '###'
 
 #: Applies the configuration from this repo to the machine
-apply_configurations:
+apply-configurations:
 	@# shell configuration
 	cp ./configs/.bash_aliases ~/.bash_aliases
 	cp ./configs/.bashrc ~/.bashrc
@@ -33,16 +31,18 @@ apply_configurations:
 	cp ./configs/.prettierrc ~/.prettierrc
 	cp ./configs/.vimrc ~/.vimrc
 	cp ./configs/.default-python-packages ~/.default-python-packages
-	
+
+ifeq ($(UNAME_OS), Linux)
 	@# dmenu configuration and scripts
 	mkdir -p ~/.local/bin
 	cp ./dmenu/*.sh ~/.local/bin
 	sudo cp ./dmenu/dmenu_run /usr/bin/dmenu_run
+endif
 
 	@echo "Configs applied. All good"
 
 #: Copies the currently aplied configuration from this machine to this repo
-copy_configurations_to_git:
+copy-configurations_to_git:
 	cp ~/.bash_aliases ./configs/.bash_aliases
 	cp ~/.bashrc ./configs/.bashrc
 	cp ~/.zshrc ./configs/.zshrc
@@ -61,5 +61,13 @@ copy_configurations_to_git:
 	cp ~/.oh-my-zsh/custom/themes/robbyrussell.zsh-theme ./configs/robbyrussell.zsh-theme
 	cp /usr/bin/dmenu_run ./dmenu/dmenu_run
 
-install_software:
-	.helper_scripts/install-software.sh
+#: Install software
+install-software:
+ifeq ($(UNAME_OS), Linux)
+	./helper_scripts/install-software-ubuntu.sh
+else ifeq ($(UNAME_OS), Darwin)
+	./helper_scripts/install-software-mac.sh
+else
+	echo "Unsupported system"
+	exit 1
+endif
