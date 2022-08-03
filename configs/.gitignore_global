@@ -7,9 +7,6 @@
 .idea
 *.iml
 
-# formatting
-.prettierrc
-
 # Direnv stuff
 .direnv
 .envrc
