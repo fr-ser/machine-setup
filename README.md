@@ -8,6 +8,27 @@ To run the scripts the following things need to be be present and installed alre
 
 - make (to run the Makefile commands)
 
+## Usage
+
+To see the available commands run: `make help`
+
+## Content of the setup
+
+### Supported environments
+
+- linux (Ubuntu)
+- MacOs
+
+## Application to install
+
+- Terminal applications:
+  - Linux: zsh, curl, jq, vim, git, tmux, htop, dmenu, direnv, python build tools
+  - macOs: jq, tmux, direnv
+- vim related: package manager (vundle) and packages
+- tmux related: tmux plugin manager and packages, powerline and powerline fonts
+- zsh related: oh-my-zsh
+- docker: needs to be installed manually
+
 ## App Configurations
 
 The following apps have a configuration in this repo:
@@ -16,11 +37,7 @@ The following apps have a configuration in this repo:
 - zsh
 - tmux
 - vim
-
-## Environments
-
-The script was initially written for a Linux setup.
-
-## Usage
-
-To see the available commands run: `make help`
+- bash
+- prettier
+- asdf
+- dmenu (Linux only)
