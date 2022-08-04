@@ -3,3 +3,5 @@ black
 pylint
 flake8
 autopep8
+cookiecutter
+poetry
