@@ -50,7 +50,7 @@ endif
 	@echo "Configs applied. All good"
 
 #: Copies the currently aplied configuration from this machine to this repo
-copy-configurations_to_git:
+copy-configurations-to-git:
 	cp ~/.bash_aliases ./configs/.bash_aliases
 	cp ~/.bashrc ./configs/.bashrc
 	cp ~/.zshrc ./configs/.zshrc
