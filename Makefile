@@ -68,16 +68,18 @@ copy-configurations-to-git:
 	cp /usr/local/bin/git-graph ./git_commands/git-graph
 	cp /usr/local/bin/git-push-new ./git_commands/git-push-new
 	cp ~/.oh-my-zsh/custom/themes/robbyrussell.zsh-theme ./configs/robbyrussell.zsh-theme
-	cp /usr/bin/dmenu_run ./dmenu/dmenu_run
 
 ifeq ($(shell uname -s), Linux)
+	@# dmenu configuration and scripts
+	cp /usr/bin/dmenu_run ./dmenu/dmenu_run
+
 	@# tmux configuration
-	cp ~/.tmux/linux/status_cpu.sh ./configs/tmux/status_cpu.sh
-	cp ~/.tmux/linux/status_memory.sh ./configs/tmux/status_memory.sh
+	cp ~/.tmux/status_cpu.sh ./configs/tmux/linux/status_cpu.sh
+	cp ~/.tmux/status_memory.sh ./configs/tmux/linux/status_memory.sh
 else ifeq ($(shell uname -s), Darwin)
 	@# tmux configuration
-	cp ~/.tmux/macos/status_cpu.sh ./configs/tmux/status_cpu.sh
-	cp ~/.tmux/macos/status_memory.sh ./configs/tmux/status_memory.sh
+	cp ~/.tmux/status_cpu.sh ./configs/tmux/macos/status_cpu.sh
+	cp ~/.tmux/status_memory.sh ./configs/tmux/macos/status_memory.sh
 else
 	echo "Unsupported system"
 	exit 1
