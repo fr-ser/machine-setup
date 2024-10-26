@@ -17,8 +17,6 @@ apply-configurations:
 
 	@# git configuration
 	cp ./configs/.gitignore_global ~/.gitignore_global
-	sudo cp ./git_commands/git-graph /usr/local/bin/git-graph
-	sudo cp ./git_commands/git-push-new /usr/local/bin/git-push-new
 	cp ./configs/.gitconfig ~/.gitconfig
 	
 	@# tmux configuration
@@ -65,8 +63,6 @@ copy-configurations-to-git:
 	cat ~/.gitconfig | sed -r '/(name|email|user)/d' > ./configs/.gitconfig
 	cp ~/.gitignore_global ./configs/.gitignore_global
 	cp ~/.default-python-packages ./configs/.default-python-packages
-	cp /usr/local/bin/git-graph ./git_commands/git-graph
-	cp /usr/local/bin/git-push-new ./git_commands/git-push-new
 	cp ~/.oh-my-zsh/custom/themes/robbyrussell.zsh-theme ./configs/robbyrussell.zsh-theme
 
 ifeq ($(shell uname -s), Linux)

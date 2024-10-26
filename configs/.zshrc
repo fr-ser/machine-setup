@@ -45,12 +45,23 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# add golang to path
+# path for golang installs
 export PATH=$PATH:/usr/local/go/bin:~/go/bin
 
+# path for global yarn/npm packages
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# fix for Apple M1 librdkafka dependency
+export LDFLAGS="-L/opt/homebrew/opt/openssl@3/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/openssl@3/include"
+export C_INCLUDE_PATH=/opt/homebrew/Cellar/librdkafka/1.9.2/include
+export LIBRARY_PATH=/opt/homebrew/Cellar/librdkafka/1.9.2/lib
 
 # add direnv hook
 eval "$(direnv hook zsh)"
 
 . $HOME/.asdf/asdf.sh
+
+# set node path correctly - relevant for different nodejs versions with asdf
+export NODE_PATH=$NODE_PATH:`npm root -g`
+
