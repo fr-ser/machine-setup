@@ -31,3 +31,5 @@ alias k="kubectl"
 alias l="ls -lah"
 
 alias git-graph="git log --all --decorate --oneline --graph"
+
+alias js-scripts="jq '.scripts' package.json"
