@@ -1,11 +1,14 @@
-help:
-	@grep -B1 -E "^[a-zA-Z0-9_-]+\:([^\=]|$$)" Makefile \
-		| grep -v -- -- \
-		| sed 'N;s/\n/###/' \
-		| sed -n 's/^#: \(.*\)###\(.*\):.*/\2:###\1/p' \
-		| column -t  -s '###'
+.DEFAULT_GOAL := help
 
-#: Applies the configuration from this repo to the machine
+# Show this help prompt.
+help:
+	@ echo '  Usage:'
+	@ echo '    make <target>'
+	@ echo ''
+	@ echo '  Targets:'
+	@ awk '/^#/{ comment = substr($$0,3) } comment && /^[a-zA-Z][a-zA-Z0-9_-]+ ?:/{ print "   ", $$1, comment }' $(MAKEFILE_LIST) | column -t -s ':'
+
+# Applies the configuration from this repo to the machine
 apply-configurations:
 	@# shell configuration
 	cp ./configs/.bash_aliases ~/.bash_aliases
@@ -47,7 +50,7 @@ else
 endif
 	@echo "Configs applied. All good"
 
-#: Copies the currently aplied configuration from this machine to this repo
+# Copies the currently aplied configuration from this machine to this repo
 copy-configurations-to-git:
 	cp ~/.bash_aliases ./configs/.bash_aliases
 	cp ~/.bashrc ./configs/.bashrc
@@ -81,7 +84,7 @@ else
 	exit 1
 endif
 
-#: Install software
+# Install software
 install-software:
 ifeq ($(shell uname -s), Linux)
 	./helper_scripts/install-software-ubuntu.sh
