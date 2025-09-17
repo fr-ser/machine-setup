@@ -5,10 +5,11 @@ docker-clean-slate() {
     docker system prune -f --volumes
 }
 
-docker-compose-restart() {
-	docker-compose stop $@
-	docker-compose rm -f -v $@
-	docker-compose up --build -d $@
+# podman is an alternative to docker (desktop) for macOs
+podman-clean-slate() {
+    podman kill $(podman ps -q)
+    podman rm $(podman ps -aq)
+    podman system prune -f --volumes
 }
 
 # Common ps grep
