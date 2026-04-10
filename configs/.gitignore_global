@@ -6,6 +6,7 @@
 .vsls.json
 .idea
 *.iml
+.claude/*
 
 # Direnv stuff
 .direnv

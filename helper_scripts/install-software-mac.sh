@@ -5,7 +5,7 @@ set -e
 # install brew: https://brew.sh/
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-brew install jq tmux direnv
+brew install jq tmux direnv rtk
 
 # install powerline fonts for the terminal prompt
 git clone https://github.com/powerline/fonts.git --depth=1 && cd fonts && ./install.sh && cd .. && rm -rf fonts

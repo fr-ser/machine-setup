@@ -65,3 +65,4 @@ eval "$(direnv hook zsh)"
 # set node path correctly - relevant for different nodejs versions with asdf
 export NODE_PATH=$NODE_PATH:`npm root -g`
 
+export PATH="$HOME/.local/bin:$PATH"

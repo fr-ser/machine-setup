@@ -5,6 +5,12 @@ docker-clean-slate() {
     docker system prune -f --volumes
 }
 
+docker-compose-restart() {
+	docker-compose stop $@
+	docker-compose rm -f -v $@
+	docker-compose up --build -d $@
+}
+
 # podman is an alternative to docker (desktop) for macOs
 podman-clean-slate() {
     podman kill $(podman ps -q)
@@ -32,3 +38,4 @@ alias k="kubectl"
 alias l="ls -lah"
 
 alias git-graph="git log --all --decorate --oneline --graph"
+alias docker=podman

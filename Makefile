@@ -31,6 +31,14 @@ apply-configurations:
 	cp ./configs/.vimrc ~/.vimrc
 	cp ./configs/.default-python-packages ~/.default-python-packages
 
+	@# claude code configuration
+	mkdir -p ~/.claude
+	sed "s|~/.claude|$(HOME)/.claude|g" ./configs/claude/settings.json > ~/.claude/settings.json
+
+	@# vscode configuration
+	cp ./configs/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+	cp ./configs/vscode/mcp.json ~/Library/Application\ Support/Code/User/mcp.json
+
 ifeq ($(shell uname -s), Linux)
 	@# dmenu configuration and scripts
 	mkdir -p ~/.local/bin
@@ -67,6 +75,13 @@ copy-configurations-to-git:
 	cp ~/.gitignore_global ./configs/.gitignore_global
 	cp ~/.default-python-packages ./configs/.default-python-packages
 	cp ~/.oh-my-zsh/custom/themes/robbyrussell.zsh-theme ./configs/robbyrussell.zsh-theme
+
+	@# claude code configuration
+	cp ~/.claude/settings.json ./configs/claude/settings.json
+
+	@# vscode configuration
+	cp ~/Library/Application\ Support/Code/User/settings.json ./configs/vscode/settings.json
+	cp ~/Library/Application\ Support/Code/User/mcp.json ./configs/vscode/mcp.json
 
 ifeq ($(shell uname -s), Linux)
 	@# dmenu configuration and scripts

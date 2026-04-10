@@ -19,13 +19,18 @@ make install-software            # Run the OS-appropriate install script
 
 The repo has two concerns:
 
-1. **Config files** (`configs/`) — dotfiles for zsh, bash, vim, tmux, git, prettier, asdf, and the oh-my-zsh theme. Tmux status scripts are split by OS: `configs/tmux/linux/` and `configs/tmux/macos/`.
+1. **Config files** (`configs/`) — dotfiles for zsh, bash, vim, tmux, git, prettier, asdf, and the oh-my-zsh theme. Tmux status scripts are split by OS: `configs/tmux/linux/` and `configs/tmux/macos/`. AI agent settings live in subdirectories:
+   - `configs/claude/` — Claude Code `settings.json` (→ `~/.claude/`)
+   - `configs/vscode/` — VS Code `settings.json` and `mcp.json` (→ `~/Library/Application Support/Code/User/`)
 
-2. **Install scripts** (`helper_scripts/`) — one script per OS. They install packages, clone plugin managers (Vundle for vim, tpm for tmux, asdf for runtime versions, oh-my-zsh), then call `make apply-configurations` at the end.
-
+2. **Install/helper scripts** (`helper_scripts/`) — one install script per OS. They install packages, clone plugin managers (Vundle for vim, tpm for tmux, asdf for runtime versions, oh-my-zsh), then call `make apply-configurations` at the end.
 `dmenu/` contains Linux-only scripts deployed to `~/.local/bin` and `/usr/bin/dmenu_run`.
 
 The Makefile uses `$(shell uname -s)` to branch between `Linux` and `Darwin` for OS-specific file placements.
+
+## Style Guide
+
+In Markdown files, write one sentence per line.
 
 ## Workflow
 
