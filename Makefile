@@ -39,6 +39,13 @@ apply-configurations:
 	cp ./configs/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
 	cp ./configs/vscode/mcp.json ~/Library/Application\ Support/Code/User/mcp.json
 
+	@# copilot configuration
+	mkdir -p ~/.copilot/hooks ~/.copilot/instructions ~/.copilot/utils
+	cp ./configs/copilot/hooks/nudge.json ~/.copilot/hooks/nudge.json
+	cp ./configs/copilot/instructions/nudge-me.instructions.md ~/.copilot/instructions/nudge-me.instructions.md
+	cp ./configs/copilot/utils/nudge-me.sh ~/.copilot/utils/nudge-me.sh
+	chmod +x ~/.copilot/utils/nudge-me.sh
+
 ifeq ($(shell uname -s), Linux)
 	@# dmenu configuration and scripts
 	mkdir -p ~/.local/bin
@@ -82,6 +89,11 @@ copy-configurations-to-git:
 	@# vscode configuration
 	cp ~/Library/Application\ Support/Code/User/settings.json ./configs/vscode/settings.json
 	cp ~/Library/Application\ Support/Code/User/mcp.json ./configs/vscode/mcp.json
+
+	@# copilot configuration
+	cp ~/.copilot/hooks/nudge.json ./configs/copilot/hooks/nudge.json
+	cp ~/.copilot/instructions/nudge-me.instructions.md ./configs/copilot/instructions/nudge-me.instructions.md
+	cp ~/.copilot/utils/nudge-me.sh ./configs/copilot/utils/nudge-me.sh
 
 ifeq ($(shell uname -s), Linux)
 	@# dmenu configuration and scripts

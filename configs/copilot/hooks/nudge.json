@@ -1,0 +1,10 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "type": "command",
+        "osx": "~/.copilot/utils/nudge-me.sh"
+      }
+    ]
+  }
+}
