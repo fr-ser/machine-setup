@@ -38,7 +38,18 @@ setopt nosharehistory
 
 # added for autocompletion for docker
 fpath=(~/.zsh/completion $fpath)
-autoload -Uz compinit && compinit -i
+autoload -Uz compinit
+# Regenerate the completion dump (~/.zcompdump) at most once a day.
+# On subsequent shell starts within the same day, use -C to skip the security
+# check and reuse the existing dump — this avoids a buildup of zcompdump files
+# and makes shell startup faster. New completions (e.g. after installing a tool)
+# will be picked up automatically the next day, or immediately if you delete
+# ~/.zcompdump and start a new shell.
+if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
+  compinit        # dump is older than 24h: regenerate it
+else
+  compinit -C     # dump is fresh: skip regeneration
+fi
 
 # added aliases (same as in bash)
 if [ -f ~/.bash_aliases ]; then
