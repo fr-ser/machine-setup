@@ -6,16 +6,9 @@ docker-clean-slate() {
 }
 
 docker-compose-restart() {
-	docker-compose stop $@
-	docker-compose rm -f -v $@
-	docker-compose up --build -d $@
-}
-
-# podman is an alternative to docker (desktop) for macOs
-podman-clean-slate() {
-    podman kill $(podman ps -q)
-    podman rm $(podman ps -aq)
-    podman system prune -f --volumes
+	docker compose stop $@
+	docker compose rm -f -v $@
+	docker compose up --build -d $@
 }
 
 # Common ps grep
@@ -39,3 +32,4 @@ alias l="ls -lah"
 
 alias git-graph="git log --all --decorate --oneline --graph"
 alias docker=podman
+alias docker-compose='docker compose'
