@@ -41,3 +41,40 @@ The following apps have a configuration in this repo:
 - prettier
 - asdf
 - dmenu (Linux only)
+
+## Git identity setup
+
+`configs/.gitconfig` only contains portable settings — no name, email, or machine-specific paths.
+Git identity is managed per-folder via `[includeIf]` blocks and separate identity files that live only on the machine, never in this repo.
+
+### Fresh machine setup
+
+After running `make apply-configurations` for the first time, create the identity files manually:
+
+**`~/.gitconfig-work`**
+
+```ini
+[user]
+    name = Your Name
+    email = you@work.com
+```
+
+**`~/.gitconfig-private`**
+
+```ini
+[user]
+    name = Your Name
+    email = you@personal.com
+```
+
+Then append the `[includeIf]` blocks to `~/.gitconfig` to activate them per folder:
+
+```ini
+[includeIf "gitdir:/path/to/work/repos/"]
+    path = ~/.gitconfig-work
+
+[includeIf "gitdir:/path/to/private/repos/"]
+    path = ~/.gitconfig-private
+```
+
+Subsequent `make apply-configurations` runs will preserve any `[includeIf]` blocks already in `~/.gitconfig`, so you only need to do this once per machine.

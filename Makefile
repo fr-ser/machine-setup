@@ -19,8 +19,15 @@ apply-configurations:
 	cp ./configs/robbyrussell.zsh-theme ~/.oh-my-zsh/custom/themes/robbyrussell.zsh-theme
 
 	@# git configuration
+	@# The stored .gitconfig contains only portable settings (no identity, no machine-specific
+	@# paths). Any [includeIf] blocks already in ~/.gitconfig are preserved across applies so
+	@# that per-folder identity files (e.g. ~/.gitconfig-work, ~/.gitconfig-private) keep working.
+	@# On a fresh machine those files don't exist yet — create them manually after the first apply
+	@# and add the matching [includeIf] entries to ~/.gitconfig. See README for details.
 	cp ./configs/.gitignore_global ~/.gitignore_global
+	@grep -A1 '^\[includeIf' ~/.gitconfig > /tmp/gitconfig-includes 2>/dev/null || true
 	cp ./configs/.gitconfig ~/.gitconfig
+	@cat /tmp/gitconfig-includes >> ~/.gitconfig
 	
 	@# tmux configuration
 	mkdir -p ~/.tmux/
@@ -65,7 +72,7 @@ else
 endif
 	@echo "Configs applied. All good"
 
-# Copies the currently aplied configuration from this machine to this repo
+# Copies the currently applied configuration from this machine to this repo
 copy-configurations-to-git:
 	cp ~/.bash_aliases ./configs/.bash_aliases
 	cp ~/.bashrc ./configs/.bashrc
@@ -78,7 +85,9 @@ copy-configurations-to-git:
 	cp ~/.tmux.conf ./configs/tmux/.tmux.conf
 	cp ~/.tmux/.tmuxline_snapshot ./configs/tmux/.tmuxline_snapshot
 
-	cat ~/.gitconfig | sed -r '/(name|email|user)/d' > ./configs/.gitconfig
+	@# Strip identity (name/email/user), [includeIf] blocks, and paths to per-identity files
+	@# before saving — none of that belongs in the repo.
+	cat ~/.gitconfig | sed -r '/(name|email|user|includeIf|\.gitconfig-)/d' > ./configs/.gitconfig
 	cp ~/.gitignore_global ./configs/.gitignore_global
 	cp ~/.default-python-packages ./configs/.default-python-packages
 	cp ~/.oh-my-zsh/custom/themes/robbyrussell.zsh-theme ./configs/robbyrussell.zsh-theme
