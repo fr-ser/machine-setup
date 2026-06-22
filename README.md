@@ -42,6 +42,11 @@ The following apps have a configuration in this repo:
 - asdf
 - dmenu (Linux only)
 
+### Explicitly excluded: VS Code
+
+VS Code settings and MCP config are **not** managed by this repo.
+Settings differ too much between work and personal machines to share a single config, and VS Code's built-in Settings Sync (tied to a GitHub/Microsoft account) handles per-machine synchronisation better anyway.
+
 ## Git identity setup
 
 `configs/.gitconfig` only contains portable settings — no name, email, or machine-specific paths.

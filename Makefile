@@ -42,10 +42,6 @@ apply-configurations:
 	mkdir -p ~/.claude
 	sed "s|~/.claude|$(HOME)/.claude|g" ./configs/claude/settings.json > ~/.claude/settings.json
 
-	@# vscode configuration
-	cp ./configs/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
-	cp ./configs/vscode/mcp.json ~/Library/Application\ Support/Code/User/mcp.json
-
 	@# copilot configuration
 	mkdir -p ~/.copilot/hooks ~/.copilot/instructions ~/.copilot/utils
 	cp ./configs/copilot/hooks/nudge.json ~/.copilot/hooks/nudge.json
@@ -94,10 +90,6 @@ copy-configurations-to-git:
 
 	@# claude code configuration
 	cp ~/.claude/settings.json ./configs/claude/settings.json
-
-	@# vscode configuration
-	cp ~/Library/Application\ Support/Code/User/settings.json ./configs/vscode/settings.json
-	cp ~/Library/Application\ Support/Code/User/mcp.json ./configs/vscode/mcp.json
 
 	@# copilot configuration
 	cp ~/.copilot/hooks/nudge.json ./configs/copilot/hooks/nudge.json
